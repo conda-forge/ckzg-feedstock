@@ -27,6 +27,7 @@ requirements:
     - pip
     - libblst
     - libblst-headers
+    - setuptools
   run:
     - python
     - libblst
