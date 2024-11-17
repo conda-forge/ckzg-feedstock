@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ckzg-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ckzg-{{ version }}.tar.gz
   sha256: 62c5adc381637affa7e1df465c57750b356a761b8a3164c3106589b02532b9c9
   patches:
     - setup.py.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -27,6 +27,7 @@ requirements:
     - pip
     - libblst
     - libblst-headers
+    - setuptools
   run:
     - python
     - libblst
