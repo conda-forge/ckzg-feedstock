@@ -38,9 +38,9 @@ test:
     - ckzg
   commands:
     - pip check
-    - python
   requires:
     - pip
+    - python
 
 about:
   home: https://github.com/ethereum/c-kzg-4844
