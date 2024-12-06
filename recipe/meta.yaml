@@ -1,19 +1,19 @@
 {% set name = "ckzg" %}
-{% set version = "2.0.1" %}
+{% set version = "1.0.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ckzg-{{ version }}.tar.gz
-  sha256: 62c5adc381637affa7e1df465c57750b356a761b8a3164c3106589b02532b9c9
+  url: https://github.com/ethereum/c-kzg-4844/archive/refs/tags/v1.0.3.tar.gz
+  sha256: d9b8bd960d7072cf5dba6ecd9f01bfb82513e75bf5170d6de5ca508ee1abc385
   patches:
     - setup.py.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
   ignore_run_exports:
     - python
 
