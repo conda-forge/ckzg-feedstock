@@ -1,5 +1,5 @@
 {% set name = "ckzg" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ckzg-{{ version }}.tar.gz
-  sha256: 62c5adc381637affa7e1df465c57750b356a761b8a3164c3106589b02532b9c9
+  sha256: 73a353f31c945f0617a6b98d82fbb23909ac5039a10e345c681b728dd917b51a
   patches:
     - setup.py.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
   ignore_run_exports:
     - python
 
