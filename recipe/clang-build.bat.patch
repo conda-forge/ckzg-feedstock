@@ -1,0 +1,6 @@
+--- blst/build.bat	2024-05-07 22:31:27
++++ blst/build.bat	2024-10-14 16:02:43
+@@ -6,17 +6,6 @@
+set CFLAGS=/nologo /c /O2 /Zi /Fdblst.pdb /W4
+cl 2>&1 | find "for ARM64" > nul:
+IF ERRORLEVEL 1 (
