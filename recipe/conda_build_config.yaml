@@ -1,4 +1,4 @@
-c_compiler:
-  - clang
-c_compiler_version:
-  - 18
+c_compiler:          # [unix]
+  - clang            # [unix]
+c_compiler_version:  # [unix]
+  - 18               # [unix]
