@@ -9,11 +9,8 @@ package:
 source:
   - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ckzg-{{ version }}.tar.gz
     sha256: 49df31684283dfcfd1eeca638d84c03788ebdd48e8afc0643bf5188ec023dc8d
-  - url: https://github.com/supranational/blst/archive/refs/tags/v{{ blst_version }}.tar.gz
-    sha256: 9e503ff6b50e044efb075d260c81c751702b3ed6f2e45394b0833834e71c3afa
-    folder: blst
-  # patches:
-  #   - setup.py.patch
+    patches:
+      - setup.py.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -25,11 +22,6 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
-    - m2-coreutils                           # [not unix]
-    - m2-findutils                           # [not unix]
-    - m2-make                                # [not unix]
-    - m2-sed                                 # [not unix]
-    - make                                   # [unix]
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
