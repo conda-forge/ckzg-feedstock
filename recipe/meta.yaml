@@ -1,6 +1,5 @@
 {% set name = "ckzg" %}
 {% set version = "2.1.6" %}
-{% set blst_version = "0.3.15" %}
 
 package:
   name: {{ name|lower }}
