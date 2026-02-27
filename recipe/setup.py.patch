@@ -1,7 +1,7 @@
 --- setup.py	2024-05-07 22:31:27
 +++ setup.py	2024-10-14 16:02:43
-@@ -6,17 +6,6 @@
- from subprocess import check_call
+@@ -18,17 +18,6 @@
+     return "make"
  
  
 -class CustomBuild(build_ext):
@@ -11,14 +11,14 @@
 -                check_call(["blst\\build.bat"])
 -            except Exception:
 -                pass
--        check_call(["make", "-C", "src", "blst"])
+-        check_call([get_make(), "-C", "src", "blst"])
 -        super().run()
 -
 -
  def main():
      # Change directory so we don't have to deal with paths.
      setup_dir = Path(__file__).parent.resolve()
-@@ -41,9 +30,6 @@
+@@ -53,9 +48,6 @@
                  libraries=["blst"]
              )
          ],
