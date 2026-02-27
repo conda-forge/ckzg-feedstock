@@ -21,7 +21,10 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
+    - m2-coreutils                           # [not unix]
+    - m2-findutils                           # [not unix]
     - m2-make                                # [not unix]
+    - m2-sed                                 # [not unix]
     - make                                   # [unix]
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
