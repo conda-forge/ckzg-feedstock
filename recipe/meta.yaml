@@ -9,7 +9,7 @@ package:
 source:
   - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ckzg-{{ version }}.tar.gz
     sha256: 49df31684283dfcfd1eeca638d84c03788ebdd48e8afc0643bf5188ec023dc8d
-  - url: https://github.com/supranational/blst/archive/{{ blst_version }}.tar.gz
+  - url: https://github.com/supranational/blst/archive/refs/tags/v{{ blst_version }}.tar.gz
     sha256: d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed
     folder: blst
   # patches:
