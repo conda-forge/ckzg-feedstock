@@ -6,10 +6,10 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ckzg-{{ version }}.tar.gz
-    sha256: 49df31684283dfcfd1eeca638d84c03788ebdd48e8afc0643bf5188ec023dc8d
-    patches:
-      - setup.py.patch
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ckzg-{{ version }}.tar.gz
+  sha256: 49df31684283dfcfd1eeca638d84c03788ebdd48e8afc0643bf5188ec023dc8d
+  patches:
+    - setup.py.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
